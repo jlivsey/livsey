@@ -1,20 +1,19 @@
-# H. Seltman, May 2014
-
-# Goal: convert a correlation matrix and variance vector
-#       into the corresponding covariance matrix
-#
-# Input:
-#   'corMat' is a square matrix with 1's on the diagonal
+#' Correlation Matrix to Covariance Matrix
+#' convert a correlation matrix and variance vector into the corresponding
+#'    covariance matrix. A warning is given if the covariance matrix is not
+#'    positive definite.
+#'
+#'
+#' @param corMat is a square matrix with 1's on the diagonal
 #      and valid correlations on the off-diagonal
-#   'varVec' is a valid variance vector, with length
+#' @param varVec is a valid variance vector, with length
 #      matching the dimension of 'covMat'.  A single
 #      row or single column matrix is also allowed.
-# Output:
-#   the covariance matrix
-#
-# A warning is given if the covariance matrix is not
-#   positive definite.
-#
+#'
+#' @return Covariance matrix
+#' @export
+#'
+
 cor2cov = function(corMat, varVec) {
   # test the input
   if (!is.matrix(corMat)) stop("'corMat must be a matrix")

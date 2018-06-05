@@ -1,4 +1,12 @@
-# Merge two dataframes based on column names (not column order)
+#' Data.frame merge
+#' Merge two dataframes based on column names (not column order)
+#'
+#' @param d1 first data.frame
+#' @param d2 second data.frame
+#'
+#' @return merged data.frame
+#' @export
+#'
 
 fastmerge <- function(d1, d2) {
   d1.names <- names(d1)
