@@ -5,12 +5,14 @@
 \title{View upper left head of a matrix.
 Analog to base R head() function for matrix}
 \usage{
-matrix_head(M, n = 10)
+matrix_head(M, n = 10, round = NA)
 }
 \arguments{
 \item{M}{matrix}
 
 \item{n}{number of rows/cols to print (default is 10)}
+
+\item{round}{specify an integer to pass to the round function}
 }
 \value{
 prints M[1:n, 1:n]
