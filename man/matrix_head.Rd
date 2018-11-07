@@ -5,7 +5,7 @@
 \title{View upper left head of a matrix.
 Analog to base R head() function for matrix}
 \usage{
-matrix_head(M, n = 10, round = NA)
+matrix_head(M, n = 10, round_integer = NA)
 }
 \arguments{
 \item{M}{matrix}
