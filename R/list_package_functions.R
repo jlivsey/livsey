@@ -8,8 +8,7 @@
 
 list_functions <- function(package.name)
 {
-  library(package.name)
   str = paste("package:", package.name, sep="")
-  return(ls(str))
+  print(ls(str))
 }
 
