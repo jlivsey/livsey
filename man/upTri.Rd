@@ -2,16 +2,18 @@
 % Please edit documentation in R/tri-matrix.R
 \name{upTri}
 \alias{upTri}
-\title{upper triangluar elements of matrix}
+\title{Upper triangluar elements of matrix}
 \usage{
-upTri(A)
+upTri(A, byrow = FALSE)
 }
 \arguments{
 \item{A}{square matrix}
+
+\item{byrow}{boolean (default=FALSE) if returned vector should be by row.}
 }
 \value{
-vector of upper triangluar elements of input matrix
+ector of upper triangluar elements of input matrix
 }
 \description{
-upper triangluar elements of matrix
+Upper triangluar elements of matrix
 }

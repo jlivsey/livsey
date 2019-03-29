@@ -16,12 +16,21 @@ fill_upper_tri = function(v, d){
 }
 
 
-#' upper triangluar elements of matrix
+
+#' Upper triangluar elements of matrix
 #'
 #' @param A square matrix
+#' @param byrow boolean (default=FALSE) if returned vector should be by row.
 #'
-#' @return vector of upper triangluar elements of input matrix
+#' @return ector of upper triangluar elements of input matrix
 #' @export
 #'
 
-upTri = function(A){ A[upper.tri(A)] }
+upTri = function(A, byrow=FALSE){
+   if(byrow){
+      t(A)[lower.tri(A)]
+   }else{
+      A[upper.tri(A)]
+   }
+}
+
