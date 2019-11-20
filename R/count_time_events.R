@@ -4,7 +4,8 @@
 #'
 #' @param event_dates vector of class "Date" of events to be counts
 #' @param event_type 'year', 'month', 'week', 'day', 'hour' or 'minute'
-#' @param event_all_possible (optional) specify all possible dates to count
+#' @param event_all_possible (optional) specify all possible dates to count used
+#'                           to count event_type's with zero values.
 #'
 #' @return table of counts for each event by event_type
 #' @export

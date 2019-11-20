@@ -12,7 +12,8 @@ count_time_events(event_dates, event_type = c("year", "month", "week",
 
 \item{event_type}{'year', 'month', 'week', 'day', 'hour' or 'minute'}
 
-\item{event_all_possible}{(optional) specify all possible dates to count}
+\item{event_all_possible}{(optional) specify all possible dates to count used
+to count event_type's with zero values.}
 }
 \value{
 table of counts for each event by event_type
