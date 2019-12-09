@@ -2,7 +2,7 @@
 % Please edit documentation in R/standardize.R
 \name{standardize}
 \alias{standardize}
-\title{Subtract mean and divide by standard deviation}
+\title{Subtract the mean and divide by the standard deviation}
 \usage{
 standardize(x)
 }
@@ -10,9 +10,9 @@ standardize(x)
 \item{x}{vector to be standardized}
 }
 \value{
-vector of same length of x with mean subtracted and divided 
+vector of same length of x with mean subtracted and divided
             through by the variance
 }
 \description{
-Subtract mean and divide by standard deviation
+Subtract the mean and divide by the standard deviation
 }

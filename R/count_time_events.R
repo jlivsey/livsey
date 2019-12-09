@@ -4,7 +4,8 @@
 #'
 #' @param event_dates vector of class "Date" of events to be counts
 #' @param event_type 'year', 'month', 'week', 'day', 'hour' or 'minute'
-#' @param event_all_possible (optional) specify all possible dates to count
+#' @param event_all_possible (optional) specify all possible dates to count used
+#'                           to count event_type's with zero values.
 #'
 #' @return table of counts for each event by event_type
 #' @export
@@ -39,14 +40,14 @@ count_time_events <- function(event_dates,
     events <- floor_date(event_dates, event_type)
 
     if(is.null(event_all_possible)){
-      first <- sort(event_dates)[1]
-      last  <- sort(event_dates)[length(event_dates)]
+      first <- sort(events)[1]
+      last  <- sort(events)[length(events)]
       event_all_possible <- seq(from = first,
                                 to = last,
                                 by = event_type)
     }
 
-    tab <- table(factor(event_dates,
+    tab <- table(factor(events,
                         levels = factor(event_all_possible)))
 
     return(tab)
