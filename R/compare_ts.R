@@ -3,11 +3,12 @@
 #'
 #' @param x1 first time series
 #' @param x2 second time series
+#' @param legend.titles (optional) vector of legend titles
 #'
 #' @return a plot
 #' @export
 #'
-compare_ts <- function(x1, x2){
+compare_ts <- function(x1, x2, legend.titles = NULL){
     x1 <- as.numeric(standardize(x1))
     x2 <- as.numeric(standardize(x2))
     d <- x1 - x2
@@ -21,4 +22,9 @@ compare_ts <- function(x1, x2){
     lines(x1, lwd = 2, col = "black")
     lines(x2, lwd = 2, col = "red")
     lines(d, type = "h")
+    if(!is.null(legend.titles)){
+      legend("topleft", legend=legend.titles,
+             col=c("black", "red"), lty=1, cex=0.8,
+             box.lty=0)
+    }
 }
