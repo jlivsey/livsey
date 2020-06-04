@@ -17,7 +17,3 @@ TRUE/FALSE opposite of %in%
 \description{
 The converse of %in%
 }
-\examples{
-12 \%!in\% 1:10
-
-}

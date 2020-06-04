@@ -8,7 +8,6 @@
 #' @return TRUE/FALSE opposite of %in%
 #' @export
 #'
-#' @examples 12 %!in% 1:10
 #'
 '%!in%' <- function(x,y){
   !('%in%'(x,y))
