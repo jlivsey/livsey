@@ -5,12 +5,14 @@
 \title{Compare 2 time series
 Plot standardized time series together along with their difference}
 \usage{
-compare_ts(x1, x2)
+compare_ts(x1, x2, legend.titles = NULL)
 }
 \arguments{
 \item{x1}{first time series}
 
 \item{x2}{second time series}
+
+\item{legend.titles}{(optional) vector of legend titles}
 }
 \value{
 a plot
