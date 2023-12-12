@@ -6,7 +6,6 @@
 #'
 #' @export
 #'
-#' @examples sourceAll_from_subdirectory("Rfiles/")
 
 sourceAll_from_subdirectory <- function(subDir_with_slash){
   subDir <- subDir_with_slash

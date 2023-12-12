@@ -1,6 +1,8 @@
-
-
 #' Count time-stamped events
+#'
+#' @import lubridate
+#' @import stats
+#' @import utils
 #'
 #' @param event_dates vector of class "Date" of events to be counts
 #' @param event_type 'year', 'month', 'week', 'day', 'hour' or 'minute'

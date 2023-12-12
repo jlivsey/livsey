@@ -1,4 +1,3 @@
-
 #' View upper left head of a matrix.
 #' Analog to base R head() function for matrix
 #'

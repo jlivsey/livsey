@@ -27,7 +27,7 @@ Diagnoal dominance does not produce large correlations but a wider variety
 or struture.
 }
 \examples{
-gen_sigma(5)
+gen_Sigma(5)
 
 
 }

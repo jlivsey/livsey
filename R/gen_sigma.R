@@ -3,6 +3,8 @@
 #' Diagnoal dominance does not produce large correlations but a wider variety
 #' or struture.
 #'
+#' @import stats
+#'
 #' @param d The dimensionality of the desired Covariance matrix
 #'
 #' @param ar1 The method that should be used. If FALSE(default) then
@@ -14,7 +16,7 @@
 #'
 #' @export
 #'
-#' @examples gen_sigma(5)
+#' @examples gen_Sigma(5)
 #'
 #'
 

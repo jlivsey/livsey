@@ -11,9 +11,6 @@ topleft(M, nView = 5)
 
 \item{nView}{Number of rows/cols to view}
 }
-\value{
-
-}
 \description{
 Print topleft of matrix
 }

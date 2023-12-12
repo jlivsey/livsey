@@ -14,6 +14,3 @@ sourceAll_from_subdirectory(subDir_with_slash)
 Source all files in a subdirector of current working directory
 Useful for IRE submission.
 }
-\examples{
-sourceAll_from_subdirectory("Rfiles/")
-}

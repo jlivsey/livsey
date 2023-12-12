@@ -1,5 +1,7 @@
 #' Subtract the mean and divide by the standard deviation
 #'
+#' @import stats
+#'
 #' @param x vector to be standardized
 #'
 #' @return vector of same length of x with mean subtracted and divided

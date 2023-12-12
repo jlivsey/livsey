@@ -1,6 +1,8 @@
 #' Compare 2 time series
 #' Plot standardized time series together along with their difference
 #'
+#' @import graphics
+#'
 #' @param x1 first time series
 #' @param x2 second time series
 #' @param legend.titles (optional) vector of legend titles
