@@ -26,30 +26,43 @@ sim_airline <- function(n = 120,
                         demean = TRUE,
                         first_obs_zero = TRUE,
                         start_date = c(2000, 1)) {
+
+  # Define operators for airline model
   delta = c(1, -1, rep(0, 10), -1, 1)
   rhs_delta = -1 * delta[-1]
   ma_filter = c(1, theta, rep(0, 10), seasonal_theta, theta * seasonal_theta)
+
+  # Initialize innovations
   w = rnorm(n + burn, sd = sigma)
+
+  # Storage for observations
   x = rep(NA, n + burn)
 
+  # initialize
   d = max(length(rhs_delta), length(ma_filter))
   x[1:d] = w[1:d]
+
+  # Main loop
   for (t in (d + 1):(n + burn)) {
     x_filter <- x[(t - 1):(t - length(rhs_delta))] * rhs_delta
     w_filter <- w[t:(t - length(ma_filter)+1)] * ma_filter
     x[t] <- sum(x_filter, w_filter)
   }
 
+  # remove burn-in values
   x_out = x[1:n + burn]
 
+  # demean if asked
   if(demean){
     x_out = x_out - mean(x_out)
   }
 
+  # Center first observation to zero if asked
   if(first_obs_zero){
     x_out = x_out - x_out[1]
   }
 
+  # Convert to a ts object
   x_out = ts(data = x_out, start = start_date, frequency = s)
 
   return(x_out)
