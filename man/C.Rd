@@ -15,3 +15,6 @@ nothing - just prints
 \description{
 Print vector in a column
 }
+\examples{
+C(1:10)
+}
