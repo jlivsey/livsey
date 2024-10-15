@@ -4,7 +4,7 @@
 #'
 #' @return nothing - just prints
 #' @export
-#'
+#' @examples C(1:10)
 
 C <- function(vector){
   print.this = matrix(vector, ncol=1)
