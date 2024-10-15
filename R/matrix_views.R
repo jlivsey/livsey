@@ -3,7 +3,7 @@
 #' @param M matrix to view
 #' @param nView Number of rows/cols to view
 #'
-#' @return
+#' @return print matrix
 #' @export
 #'
 #' @examples
@@ -19,7 +19,7 @@ topleft <- function(M, nView = 5){
 #' @param M matrix to view
 #' @param nView Number of rows/cols to view
 #'
-#' @return
+#' @return print matrix
 #' @export
 #'
 #' @examples
@@ -37,7 +37,7 @@ topright <- function(M, nView = 5){
 #' @param M matrix to view
 #' @param nView Number of rows/cols to view
 #'
-#' @return
+#' @return print matrix
 #' @export
 #'
 #' @examples
@@ -55,7 +55,7 @@ bottomright <- function(M, nView = 5){
 #' @param M matrix to view
 #' @param nView Number of rows/cols to view
 #'
-#' @return
+#' @return print matrix
 #' @export
 #'
 #' @examples
